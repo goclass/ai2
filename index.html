@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>功能選單與動態看板</title>
+    <style>
+        .carousel-item img {
+            height: calc(100vh - 56px);
+            /* 設定圖片高度為螢幕高度 */
+            object-fit: cover;
+            /* 使圖片保持比例並覆蓋整個容器 */
+        }
+        .embed-responsive {
+            position: relative;
+            display: block;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 的比例 */
+            overflow: hidden;
+        }
+        .embed-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0; /* 移除邊框 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 功能選單 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">品牌名稱</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">產品介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">產品特色</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">服務聯繫</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 動態看板 -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/300/400?image=0" class="d-block w-100" alt="看板1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>看板 1</h5>
+                    <p>這是第一個看板的描述。</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/300/400?image=1" class="d-block w-100" alt="看板2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>看板 2</h5>
+                    <p>這是第二個看板的描述。</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/300/400?image=2" class="d-block w-100" alt="看板3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>看板 3</h5>
+                    <p>這是第三個看板的描述。</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">上一個</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">下一個</span>
+        </button>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/150/150?image=1" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">這是第一張卡片的描述內容。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/150/150?image=2" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">這是第二張卡片的描述內容。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/150/150?image=3" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 3</h5>
+                        <p class="card-text">這是第三張卡片的描述內容。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/150/150?image=4" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 4</h5>
+                        <p class="card-text">這是第四張卡片的描述內容。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/150/150?image=5" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 5</h5>
+                        <p class="card-text">這是第五張卡片的描述內容。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://picsum.photos/150/150?image=6" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 6</h5>
+                        <p class="card-text">這是第六張卡片的描述內容。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="embed-responsive my-4">
+                    <iframe width="650" height="350" src="https://www.youtube.com/embed/CgkZ7MvWUAA?si=ON6_K3Tr8Kpv26du" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="embed-responsive my-4">
+                    <iframe width="650" height="350" src="https://www.youtube.com/embed/HGTJBPNC-Gw?si=-y2hlUnd9g0ry5av" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
